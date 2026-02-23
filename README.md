@@ -4,13 +4,16 @@ This repository contains the implementation of a Master's thesis project focused
 
 ## 📋 Overview
 
-The script performs the following steps to detect and analyze anomalies:
+The project includes two main files for demonstration and analysis:
+1.  **`Anomaly_Detection_Demo.py`**: A standalone Python script for automated execution.
+2.  **`Anomaly_Detection_Demo.ipynb`**: An interactive Jupyter Notebook for detailed exploration and visualization.
 
+The script performs the following steps:
 1.  **Data Preprocessing:** Scales the data using `RobustScaler` to minimize the influence of outliers during the training phase.
 2.  **Model Training:** Trains two distinct unsupervised learning models (Isolation Forest and LOF).
 3.  **Ensemble Prediction:** Combines the predictions of both models to improve detection accuracy and reduce false positives.
 4.  **Visualization:** Uses Principal Component Analysis (PCA) to visualize the anomalies in a 2D space.
-5.  **Analysis:** Performs statistical profiling and sensitivity analysis on model parameters (contamination levels).
+5.  **Analysis:** Performs statistical profiling, sensitivity analysis, and synthetic anomaly injection tests.
 
 ## 🛠️ Tech Stack
 
@@ -21,7 +24,8 @@ The script performs the following steps to detect and analyze anomalies:
 
 ## 📦 Installation
 
-To run this project, you need to install the required dependencies. Create a file named `requirements.txt` in your project folder and add the following lines:
+### 1. Create `requirements.txt`
+Create a file named `requirements.txt` in your project folder and add the following lines:
 
 ```text
 numpy
@@ -31,22 +35,24 @@ matplotlib
 seaborn
 ```
 
-Then, install the packages:
-
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
 ## 🚀 Usage
 
-1.  **Data:** Ensure you have a CSV file named `sample1.csv` in the same directory as the script (or update the file path in the code).
-2.  **Run:** Execute the main script:
+### Option A: Run the Python Script
+1.  Ensure you have a CSV file named `sample1.csv` in the same directory (or update the file path in the script).
+2.  Run the script:
 
 ```bash
-python main.py
+python Anomaly_Detection_Demo.py
 ```
 
-3.  **Output:** The script will generate a visualization window displaying the anomalies detected by each model and print statistical summaries to the console.
+### Option B: Run the Jupyter Notebook
+1.  Open `Anomaly_Detection_Demo.ipynb` in Jupyter Notebook or JupyterLab.
+2.  Run the cells sequentially to see the data processing, model training, and visualizations.
 
 ## 🔬 Methodology
 
